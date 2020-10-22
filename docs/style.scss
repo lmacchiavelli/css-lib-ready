@@ -1,0 +1,190 @@
+body{
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    box-sizing:border-box;
+}
+/*****************************************/
+/* INFORMATION HEADER                    */
+
+$heder-wrapper-background-color : white  ;
+$heder-wrapper-icon-color       : black  ;
+$heder-wrapper-text-color       : #999   ;
+
+/* Media query                           */
+    
+$heder-wrapper-break-a          : 1080px ;
+$heder-wrapper-break-b          : 730px  ;
+$heder-wrapper-break-c          : 500px  ;
+
+/*****************************************/
+
+.header-wrapper {
+    display: flex;
+    background: $heder-wrapper-background-color;
+    padding: 9px;
+    box-sizing: border-box;
+    color:$heder-wrapper-text-color;
+}
+
+.header-wrapper>* {
+    position: relative;
+}
+
+.header-wrapper>div.spedizione {
+    flex-flow: row wrap;
+    margin-left: auto;
+}
+
+.header-wrapper>*,
+.header-wrapper>div.spedizione>div {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2px;
+}
+
+.header-wrapper h1 {
+    margin: auto;
+    font-size: 1em;
+    font-weight: 200;
+    @media screen and (max-width:$heder-wrapper-break-a) {
+        display:none;
+    }
+}
+
+.header-wrapper .titolo {
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+.material-icons {
+    font-size: 18px!important;
+    margin-right: 4px;
+    color:$heder-wrapper-icon-color;
+}
+
+.spedizione .material-icons {
+    font-size: 40px!important;
+    padding-right: 11px;
+}
+
+.header-wrapper>div>a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none!important;
+}
+
+.header-wrapper>div>span {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper .dato {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.header-wrapper .spedizione {
+    align-items: center;
+    @media screen and (max-width:$heder-wrapper-break-b ) {
+        display:none!important;
+    }
+}
+
+.header-wrapper .spedizione .grande {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header-wrapper .spedizione .piccolo {
+    font-size: 11px;
+}
+
+.header-wrapper .separatore {
+    border-right: 1px dashed silver;
+    margin: 0 10px;
+    padding:0px;
+}
+
+.header-wrapper a {
+    text-decoration: none;
+    color: $heder-wrapper-text-color;
+}
+
+.header-wrapper .ico_top3,
+.header-wrapper .sep2{
+    @media screen and (max-width:$heder-wrapper-break-c ) {
+        display:none!important;
+    }
+}
+
+/*****************************************/
+/* REASSURANCES                          */
+
+$reassurances-background        : white  ;
+$reassurances-title-color       : #B90900;
+$reassurances-text-color        : #3C3C3C;
+
+/* Media query                           */
+
+$reassurances-break-a           : 1070px ;
+
+/*****************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400');
+
+.reassurances{
+    display:flex;
+    flex-flow:row wrap;
+    background:$reassurances-background;
+    padding:20px;
+    justify-content: center;
+    
+}
+.reassurances > div {
+    display: flex;
+    padding: 5px 20px;
+    flex:1;
+    @media screen and (max-width:$reassurances-break-a) {
+        min-width:50%; 
+    }
+}
+.reassurances > div:not(:last-child) {
+    border-right: 1px solid #ebe9e9;
+}
+@media screen and (max-width:$reassurances-break-a) {
+    .reassurances > div{
+        justify-content:center;        
+    }
+    .reassurances > div:nth-child(2) {
+        border-right:initial;
+    }
+}
+.reassurances .col1 {
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 0;
+}
+.reassurances .col2 {
+    flex-flow: column wrap;
+    display: flex;
+}
+.reassurances .titolo{
+    font-family: 'Pacifico', cursive;
+    color:$reassurances-title-color;
+    font-size: 19px;
+    white-space: nowrap;
+
+}
+.reassurances .dato{
+    font-family: 'Merriweather Sans', sans-serif;
+    color:$reassurances-text-color;
+    font-size:13px;
+}
+.reassurances .material-icons {
+    font-size: 34px !important;
+}
